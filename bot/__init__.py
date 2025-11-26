@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG
-
 import os
 import logging
 import time
@@ -10,18 +7,25 @@ from logging.handlers import RotatingFileHandler
 
 from .translation import Translation
 
-# Change Accordingly While Deploying To A VPS
-APP_ID = int(os.environ.get("APP_ID"))
+# --- FINAL HARDCODED CREDENTIALS ---
 
-API_HASH = os.environ.get("API_HASH")
+# APP_ID: Naya value seedha number hona chahiye (Integer)
+APP_ID = 24526878
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+# API_HASH
+API_HASH = "8cf44b8723e10b16e7de441352c8a6f5"
 
-DB_URI = os.environ.get("DB_URI")
+# BOT_TOKEN
+BOT_TOKEN = "8417458619:AAGN__toEHkjMdflB0_f4mrniVnguxjGMiY"
 
-USER_SESSION = os.environ.get("USER_SESSION")
+# DB_URI (MongoDB Link - Yehi woh variable hai jo use ho raha hai)
+DB_URI = "mongodb+srv://dinesh:Dinesh1234@cluster0.f9mlvaf.mongodb.net/?retryWrites=true&w=majority"
+
+# USER_SESSION (Optional, isse blank rehne do)
+USER_SESSION = "" 
 
 VERIFY = {}
+# --- END OF HARDCODED CREDENTIALS ---
 
 logging.basicConfig(
     level=logging.INFO,
